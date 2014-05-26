@@ -38,10 +38,46 @@ germandbls={ß},
 
 
 \section{Einleitung}
-In diesem Versuch soll der Verlauf der magnetischen Feldstärke in verschiedenen Spulenanordnungen gemessen werden.
+In diesem Versuch soll der Verlauf der magnetischen Feldstärke in verschiedenen Spulenanordnungen gemessen werden. 
 \section{Theorie}
-Magnetfelder entstehen durch die Bewegung elektrischer Ladungen. 
+Magnetfelder entstehen durch die Bewegung elektrischer Ladungen. Mehr allgemeiner Kram.....
+
+\subsection{Magnetfeld einer langen Spule}
+Das Magnetfeld im Innern eine langen Spule kann als homogen angesehen werden. Betrachtet man den Raum ausserhalb der Spule als feldfrei an, so kann die Stärke das magnetischen Feldes näherungsweise mit Hilfe der \textsc{4. Maxwellgleichung} 
+\begin{equation}
+\oint B\cdot d\vec r = \mu_r\mu_0 I
+\end{equation}
+berechnet werden. Es ergibt sich:
+\
+\begin{equation}
+B = \mu_r\mu_0\frac{nI}l\mathrm.
+\end{equation}
+\subsection{Magnetfeld einer Helmholtz-Spule}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=1.00]{/home/martin/Dokumente/SS14/Praktikum/V308/helmholtz.png}
+\caption{Schematische Darstellung eines Helmholtz-Spulenpaars}
+\label{}
+\end{figure}
+\begin{equation}
+\vec B(x)= \frac{\mu_0I}{2}\left(\frac1{\left(R^2 + (x+\frac d2)^2 \right)^\frac32} + \frac1{\left(R^2 + (x-\frac d2)^2 \right)^\frac32}  \right) \cdot \vec e_x
+\end{equation}
+
+\begin{equation}
+\frac{d\vec B}{d x} = \frac{-3\mu_0I}{2}\left( \frac{x+\frac d2}{\left(R^2 + (x+\frac d2)^2 \right)^\frac52} + \frac{x-\frac d2}{\left(R^2 + (x-\frac d2)^2 \right)^\frac52}\right)
+\end{equation}
+\subsection{Funktionsweise einer Hall-Sonde}
+Die in diesem Versuch zu bestimmenden magnetischen Feldstärken, werden mit Hilfe einer Hall-Sonde gemessen. Dieses Messverfahren basiert auf dem \textit{Hall-Effekt}, welcher an dieser Stelle kurz durch Abbildung \ref{hall} erläutert werden soll.  
 \section{Durchführung}
+\subsection{Messung an der langen Spule}
+
+
+
+
+\subsection{Messung an Helmholtz-Spule}
+
+
 \section{Auswertung}
 
 \section{Quellen}
