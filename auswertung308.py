@@ -91,7 +91,7 @@ x23, b23 = loadtxt("messwerte23.txt", unpack=True)
 
 # Plots der experimentellen Werte
 # Spulenpaar 10 cm:
-plt.plot([x11],[b11],'x')
+plt.plot(x11,b11,'x')
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
 plt.xlim(0, 21)
@@ -100,7 +100,7 @@ plt.savefig("e11.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Spulenpaar 6.25cm:
-plt.plot([x12],[b12],'x')
+plt.plot(x12,b12,'x')
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
 plt.xlim(0, 21)
@@ -109,7 +109,7 @@ plt.savefig("e12.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Spulenpaar 20cm:
-plt.plot([x13],[b13],'x')
+plt.plot(x13,b13,'x')
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
 plt.xlim(0, 16)
@@ -118,7 +118,7 @@ plt.savefig("e13.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Lange Spule:
-plt.plot([x21],[b21],'x')
+plt.plot(x21,b21,'x')
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
 plt.xlim(0, 45)
@@ -127,7 +127,7 @@ plt.savefig("e21.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Mittlere Spule:
-plt.plot([x22],[b22],'x')
+plt.plot(x22,b22,'x')
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
 plt.xlim(0, 55)
@@ -136,7 +136,7 @@ plt.savefig("e22.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Kurze Spule:
-plt.plot([x23],[b23],'x')
+plt.plot(x23,b23,'x')
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
 plt.xlim(0, 55)
