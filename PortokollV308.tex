@@ -40,10 +40,10 @@ germandbls={ß},
 \section{Einleitung}
 In diesem Versuch soll der Verlauf der magnetischen Feldstärke in verschiedenen Spulenanordnungen gemessen werden. 
 \section{Theorie}
-Magnetfelder entstehen durch die Bewegung elektrischer Ladungen. Mehr allgemeiner Kram.....
+Magnetfelder entstehen durch die Bewegung elektrischer Ladungen. Also wird jeder Leiter, durch den ein elektrischer Strom fließt, von einem Magnetfeld umgeben. Im Gegensatz zu E-Feld-Linien sind Magnetfeldlinien immer geschlossen. Außerdem kreuzen sie sich nicht. Im Falle einer in diesem Versuch betrachteten Spule beschreiben die Feldlinien konzentrische Kreise, die senkrecht zum Stromfluss verlaufen.
 
 \subsection{Magnetfeld einer langen Spule}
-Das Magnetfeld im Innern eine langen Spule kann als homogen angesehen werden. Betrachtet man den Raum ausserhalb der Spule als feldfrei an, so kann die Stärke das magnetischen Feldes näherungsweise mit Hilfe der \textsc{4. Maxwellgleichung} 
+Das Magnetfeld im Innern eine langen Spule kann als homogen angesehen werden. Nimmt man den Raum ausserhalb der Spule als feldfrei an, so kann die Stärke das magnetischen Feldes näherungsweise mit Hilfe der \textsc{4. Maxwellgleichung} 
 \begin{equation}
 \oint B\cdot d\vec r = \mu_r\mu_0 I
 \end{equation}
@@ -53,19 +53,24 @@ berechnet werden. Es ergibt sich:
 B = \mu_r\mu_0\frac{nI}l\mathrm.
 \end{equation}
 \subsection{Magnetfeld einer Helmholtz-Spule}
+Bei einer Helmholtz-Spule haben zwei Spulen als Abstand zueinander ihren Radius. Bei dieser Anordnung wird auf der Spulenachse im Inneren ein homogenes Magnetfeld erzeugt. Dieses Magnetfeld hat die selben Eigenschaften wie das Magnetfeld einer langen Spule, allerdings ist es für Versuche oft besser geeignet, da zwischen dem Helmholtz-Spulenpaar ein Versuchsaufbau arretiert werden kann. Ein Helmholtz-Spulenpaar ist in Abbildung \ref{hhspule} dargestellt.
+
 
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=1.00]{helmholtz.png}
 \caption{Schematische Darstellung eines Helmholtz-Spulenpaars}
-\label{}
+\label{hhspule}
 \end{figure}
+\noindent
+Die Magnetfeldstärke auf der Spulenachse an der Stelle x wird dann berechnet mit 
 \begin{equation}
-\vec B(x)= \frac{\mu_0I}{2}\left(\frac1{\left(R^2 + (x+\frac d2)^2 \right)^\frac32} + \frac1{\left(R^2 + (x-\frac d2)^2 \right)^\frac32}  \right) \cdot \vec e_x
+\vec B(x)= \frac{\mu_0I}{2}\left(\frac1{\left(R^2 + (x+\frac d2)^2 \right)^\frac32} + \frac1{\left(R^2 + (x-\frac d2)^2 \right)^\frac32}  \right) \cdot \vec e_x.
+\label{BFeld}
 \end{equation}
-
+Wenn man Formel (\ref{BFeld}) nach x ableitet, ergibt sich die Änderung der Magnetfeldstärke B:
 \begin{equation}
-\frac{d\vec B}{d x} = \frac{-3\mu_0I}{2}\left( \frac{x+\frac d2}{\left(R^2 + (x+\frac d2)^2 \right)^\frac52} + \frac{x-\frac d2}{\left(R^2 + (x-\frac d2)^2 \right)^\frac52}\right) \cdot \vec e_x
+\frac{d\vec B}{d x} = \frac{-3\mu_0I}{2}\left( \frac{x+\frac d2}{\left(R^2 + (x+\frac d2)^2 \right)^\frac52} + \frac{x-\frac d2}{\left(R^2 + (x-\frac d2)^2 \right)^\frac52}\right) \cdot \vec e_x.
 \end{equation}
 \subsection{Funktionsweise einer Hall-Sonde}
 Die in diesem Versuch zu bestimmenden magnetischen Feldstärken, werden mit Hilfe einer Hall-Sonde gemessen. Dieses Messverfahren basiert auf dem \textit{Hall-Effekt}, welcher an dieser Stelle kurz durch Abbildung \ref{hall} erläutert werden soll.  
@@ -76,38 +81,99 @@ Die in diesem Versuch zu bestimmenden magnetischen Feldstärken, werden mit Hilf
 \caption{Schematische Darstellung des Hall-Effekts}
 \label{hall}
 \end{figure}
-
-An die Hall-sonde wird ein Strom $I$ angelegt. Wird die Sonde von einem magnetischen Feld $\vec B$ durchdrungen, werden die bewegten Ladungen im Inneren durch die Lorentzkraft $F_L$ abgelenkt. Auf Grund dieser Ladungstrennung entsteht ein Elektisches Feld $\vec E$. Dieses wirkt der Ansammlung weiterer Ladungsträger entgegen. Des Weiteren wird durch das Feld eine Spannung erzeugt, die an den Seiten der Sonde abgegriffen werden kann. Im Gleichgewicht gilt:
+\noindent
+An die Hallsonde wird ein Strom $I$ angelegt. Wird die Sonde von einem magnetischen Feld $\vec B$ durchdrungen, werden die bewegten Ladungen im Inneren durch die Lorentzkraft $F_L$ abgelenkt. Auf Grund dieser Ladungstrennung entsteht ein Elektisches Feld $\vec E$. Dieses wirkt der Ansammlung weiterer Ladungsträger entgegen. Des Weiteren wird durch das Feld eine Spannung erzeugt, die an den Seiten der Sonde abgegriffen werden kann. Im Gleichgewicht gilt:
 \[
-F_L = F_{el}
+F_L = F_{el}.
 \]
 Hieraus kann eine Beziehung für das Magnetfeld in Abhängigkeit von der gemessenen Spannung $U_H$ hergeleitet werden:
 \[
-B = \frac{d}{A_H I } \cdot U_H
+B = \frac{d}{A_H I } \cdot U_H.
 \]
 Dabei ist $A_H$, genannt Hallkonstante, eine Materialkonstante und $d$ die Dicke der Hall-Sonde. 
-Diese Berechnungen werden vom Messgerät, welches in diesem Versuch verwendet wird, intern ausgeführt. Die so gemessene magnetische Feldstärke wird als direkt angezeigt.
+Diese Berechnungen werden vom Messgerät, welches in diesem Versuch verwendet wird, intern ausgeführt. Die so gemessene magnetische Feldstärke wird also direkt angezeigt.
 
 \section{Aufbau und Durchführung}
+Alle Spulen werden an Labornetzteilen angeschlossen, die die Spannung und den fließenden Strom zeigen. Zur Messung der Magnetfeldstärke wird eine Hallsonde an ein Gaußmeter angeschlossen.
 \subsection{Messung an der langen Spule}
 Für die Messung an der langen Spule stehen drei Spulenmodule zur Verfügung. Die Spulen sind identisch zueinander und haben folgende Eigenschaften:
 \begin{itemize}
 \item $n = 3400$
-\item $l = \SI{12345678}{\meter}$
 \item $d = \SI{0.11}{\meter} \Rightarrow r =  \SI{0.055}{\meter} $.
 \end{itemize}
 Die Module können hintereinander gesetzt werden, um so längere Spulen zu erzeugen. Die zu vermessende Spule kann an einem Holzlineal auf der x-Achse verschoben werden. Eine longitudinale Hallsonde ist so an einem Stativ befestigt, dass die Sonde auf der Achse der Spule liegt. Durch das Verschieben der Spule wird dann das Magnetfeld im Inneren der Spule an verschiedenen Punkten der Achse gemessen.
 \newline
-Es werden drei Spulen mit unterschiedlicher Länge untersucht. Dabei wird die Magnetfeldstärke in Abhängigkeit vom Ort x der 
+Es werden drei Spulen mit unterschiedlicher Länge untersucht. Dabei wird die Magnetfeldstärke in Abhängigkeit vom Ort x der Hallsonde gemessen.
 \subsection{Messung an der Helmholtz-Spule}
-Die Helmholtz-Spule ist auf einem Sockel befestigt, der an einer Skala das Ablesen der Spulenpositionen ermöglicht. Über den Spulen befindet sich eine Schiene zur Aufnahme der transversalen Hallsonde. An dieser Schiene befindet sich ebenfalls eine Skala. Die Helmholtz-Spule hat folgende Eigenschaften:
+Das Spulenpaar ist auf einem Sockel befestigt, der an einer Skala das Ablesen der Spulenpositionenen ermöglicht. Über den Spulen befindet sich eine Schiene zur Aufnahme der transversalen Hallsonde. An dieser Schiene befindet sich ebenfalls eine Skala. Die Spulen haben folgende Eigenschaften:
 \begin{itemize}
 \item $n = 100$
 \item $l = \SI{0.033}{\meter}$
 \item $d = \SI{0.125}{\meter} \Rightarrow r =  \SI{0.0625}{\meter} $.
 \end{itemize}
+Es werden nun drei verschiedene Spulenabstände untersucht, bei einem dieser Abstände soll der Abstand der Spulen gleich dem Radius der Spulen sein. Dann handelt es sich um ein Helmholtz-Spulenpaar und das Magnetfeld auf der Spulenachse soll homogen sein. Es sollen jeweils 15 Magnetfeldstärken an verschiedenen Orten x auf der Spulenachse gemessen werden.
 
 \section{Auswertung}
+Die in den Tabellen 1-6 (Anhang) sind die gemessenen Werte eingetragen. Mit Hilfe der Formel (3) wurden dann die Theoriekurven des Spulenpaars und mit Hilfe der Formel (2) die Theoriekurven der langen Spule berechnet. Dabei wurden folgende Größen eingesetzt:
+\begin{itemize}
+\item $n_{Spulenpaar} = 100$
+\item $R_{Spulenpaar} = \SI{0.125}{\meter}$
+\item $I_{Spulenpaar} = \SI{2.78}{\ampere}$
+\item $n_{Spulenelement} = 3400$
+\item $R_{Spulenelement} = \SI{0.055}{\meter}$
+\item $I_{lange Spule} = \SI{0.7}{\ampere}$
+\item $I_{mittlere, kurze Spule} = \SI{0.8}{\ampere}$
+\item $l_{Spulenelement} \approx \SI{0.1}{\meter}$
+\end{itemize}
+Die gemessenen und berechneten Kurven sind jeweils in den Abbildungen \ref{plot1} bis \ref{plot6} abgebildet. Dabei sind die Graphen so verschoben, dass bei $x=0$ der Mittelpunkt der Spule/Spulen ist.
+
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{e11.png}
+\caption{Spulenpaar - $d =\SI{0.1}{\meter}$}
+\label{plot1}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{e12.png}
+\caption{Spulenpaar - $d =\SI{0.0625}{\meter}$}
+\label{hhspule}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{e13.png}
+\caption{Spulenpaar - $d =\SI{0.2}{\meter}$}
+\label{hhspule}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{e21.png}
+\caption{Lange Spule (drei Elemente)}
+\label{hhspule}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{e22.png}
+\caption{Mittlere Spule (zwei Elemente)}
+\label{hhspule}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{e23.png}
+\caption{Kurze Spule (ein Element)}
+\label{plot6}
+\end{figure}
+
+\section{Diskussion}
+Die Messung der Magnetfeldstärke mit Hilfe der Hallsonde war gut durchzuführen. Die Werte wurden in mT digital ausgegeben.
+\newline
+
 
 \section{Quellen}
 \begin{enumerate}[{[}1{]}]
@@ -120,8 +186,9 @@ Die Helmholtz-Spule ist auf einem Sockel befestigt, der an einer Skala das Ables
 \item Tabellen
 \item Auszug aus dem Messheft
 \end{itemize}
+\newpage
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{ll}
 \toprule
@@ -145,10 +212,10 @@ Die Helmholtz-Spule ist auf einem Sockel befestigt, der an einer Skala das Ables
 \bottomrule
 \end{tabular}
 \label{}
-\caption{}
+\caption{Untersuchung des Spulenpaares - $d =\SI{0.1}{\meter}$}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{ll}
 \toprule
@@ -172,10 +239,10 @@ Die Helmholtz-Spule ist auf einem Sockel befestigt, der an einer Skala das Ables
 \bottomrule
 \end{tabular}
 \label{}
-\caption{}
+\caption{Untersuchung des Spulenpaares - $d =\SI{0.0625}{\meter}$}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{ll}
 \toprule
@@ -199,10 +266,10 @@ Die Helmholtz-Spule ist auf einem Sockel befestigt, der an einer Skala das Ables
 \bottomrule
 \end{tabular}
 \label{}
-\caption{}
+\caption{Untersuchung des Spulenpaares - $d =\SI{0.2}{\meter}$}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{ll}
 \toprule
@@ -243,10 +310,10 @@ Die Helmholtz-Spule ist auf einem Sockel befestigt, der an einer Skala das Ables
 \bottomrule
 \end{tabular}
 \label{}
-\caption{}
+\caption{Untersuchung der langen Spule (drei Elemente)}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{ll}
 \toprule
@@ -296,10 +363,10 @@ Die Helmholtz-Spule ist auf einem Sockel befestigt, der an einer Skala das Ables
 \bottomrule
 \end{tabular}
 \label{}
-\caption{}
+\caption{Untersuchung der mittleren Spule (zwei Elemente)}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{ll}
 \toprule
@@ -349,7 +416,7 @@ Die Helmholtz-Spule ist auf einem Sockel befestigt, der an einer Skala das Ables
 \bottomrule
 \end{tabular}
 \label{}
-\caption{}
+\caption{Untersuchung der kurzen Spule (ein Element)}
 \end{table}
 
 

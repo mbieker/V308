@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.28)  26 MAY 2014 22:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.28)  27 MAY 2014 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -817,7 +817,35 @@ Now handling font encoding U ...
    defining Unicode char U+2423 (decimal 9251)
 )
 Package selinput Info: Encoding `utf8' selected on input line 21.
- (./PortokollV308.aux)
+ (./PortokollV308.aux
+
+LaTeX Warning: Label `hhspule' multiply defined.
+
+
+LaTeX Warning: Label `hhspule' multiply defined.
+
+
+LaTeX Warning: Label `hhspule' multiply defined.
+
+
+LaTeX Warning: Label `hhspule' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+)
 \openout1 = `PortokollV308.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -963,60 +991,100 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \c__siunitx_mathtt_int=\count160
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (5.00917pt too wide) in paragraph at lines 43--44
-\OT1/cmr/m/n/10.95 Magnetfelder entste-hen durch die Be-we-gung elek-trischer L
-adun-gen. Mehr all-ge-meiner Kram..... 
- []
-
-<helmholtz.png, id=8, 350.955pt x 96.525pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <helmholtz.png, id=8, 350.
+955pt x 96.525pt>
 File: helmholtz.png Graphic file (type png)
- <use helmholtz.png>
-Package pdftex.def Info: helmholtz.png used on input line 59.
+
+<use helmholtz.png>
+Package pdftex.def Info: helmholtz.png used on input line 61.
 (pdftex.def)             Requested size: 350.95415pt x 96.52475pt.
-
-
-LaTeX Warning: Reference `hall' on page 1 undefined on input line 71.
-
-[1
+ [1
 
  <./helmholtz.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+<hall.png, id=22, 270.765pt x 104.94pt>
+File: hall.png Graphic file (type png)
+ <use hall.png>
+Package pdftex.def Info: hall.png used on input line 80.
+(pdftex.def)             Requested size: 270.76433pt x 104.93973pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+ [2 <./hall.png>]
+<e11.png, id=28, 578.16pt x 433.62pt>
+File: e11.png Graphic file (type png)
+ <use e11.png>
+Package pdftex.def Info: e11.png used on input line 133.
+(pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
-[2] (./PortokollV308.aux)
+<e12.png, id=29, 578.16pt x 433.62pt>
+File: e12.png Graphic file (type png)
+ <use e12.png>
+Package pdftex.def Info: e12.png used on input line 140.
+(pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
-LaTeX Warning: There were undefined references.
+<e13.png, id=30, 578.16pt x 433.62pt>
+File: e13.png Graphic file (type png)
+ <use e13.png>
+Package pdftex.def Info: e13.png used on input line 147.
+(pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
+
+<e21.png, id=31, 578.16pt x 433.62pt>
+File: e21.png Graphic file (type png)
+ <use e21.png>
+Package pdftex.def Info: e21.png used on input line 154.
+(pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
+
+<e22.png, id=32, 578.16pt x 433.62pt>
+File: e22.png Graphic file (type png)
+ <use e22.png>
+Package pdftex.def Info: e22.png used on input line 161.
+(pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
+
+<e23.png, id=33, 578.16pt x 433.62pt>
+File: e23.png Graphic file (type png)
+ <use e23.png>
+Package pdftex.def Info: e23.png used on input line 168.
+(pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
+
+ []
+
+[3] [4 <./e11.png>] [5 <./e12.png>] [6 <./e13.png>] [7 <./e21.png>] [8 <./e22.p
+ng>] [9 <./e23.png>] [10] [11] [12] [13] [14] [15] (./PortokollV308.aux)
+
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12267 strings out of 493304
- 247160 string characters out of 6139871
- 256518 words of memory out of 5000000
- 15507 multiletter control sequences out of 15000+600000
- 15304 words of font info for 59 fonts, out of 8000000 for 9000
+ 12308 strings out of 493304
+ 247586 string characters out of 6139871
+ 261598 words of memory out of 5000000
+ 15542 multiletter control sequences out of 15000+600000
+ 14996 words of font info for 58 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,7n,35p,10426b,820s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on PortokollV308.pdf (3 pages, 156113 bytes).
+ 39i,14n,35p,10426b,928s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb>
+Output written on PortokollV308.pdf (16 pages, 235736 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
