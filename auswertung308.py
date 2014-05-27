@@ -102,7 +102,7 @@ x12 -= 1.25
 x13 -= 8
 x21 -= 18
 x22 -= 24
-x23 -= 2
+x23 -= 29
 
 
 x11 *= 1e-2
@@ -116,7 +116,7 @@ x23 *= 1e-2
 x = linspace(-0.08,.18)
 plt.plot(x11,b11,'x',label = "Messwerte")
 plt.plot(x,1e3*B_HelH(x, 2.78, 0.0625, 0.1),label = "Theoriekurve")
-plt.xlabel("x [cm]")
+plt.xlabel("x [m]")
 plt.ylabel("B [mT]")
 #plt.xlim(-3, 18)
 #plt.ylim(0, 3)
@@ -128,7 +128,7 @@ plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 plt.plot(x12,b12,'x',label = "Messwerte")
 x = linspace(-0.01,.18)
 plt.plot(x,1e3*B_HelH(x, 2.78, 0.0625, 0.0625),label = "Theoriekurve")
-plt.xlabel("x [cm]")
+plt.xlabel("x [m]")
 plt.ylabel("B [mT]")
 #plt.xlim(0, 21)
 #plt.ylim(0, 4)
@@ -140,7 +140,7 @@ plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 plt.plot(x13,b13,'x',label = "Messwerte")
 x = linspace(-0.08,.08)
 plt.plot(x,1e3*B_HelH(x, 2.78, 0.0625, 0.2),label = "Theoriekurve")
-plt.xlabel("x [cm]")
+plt.xlabel("x [m]")
 plt.ylabel("B [mT]")
 #plt.xlim(0, 16)
 #plt.ylim(0, 2.5)
@@ -153,7 +153,7 @@ plt.plot(x21,b21,'x',label = "Messwerte")
 x = linspace(-.09, .24)
 B = ones(50)*1e3*mu_0*(3400/0.1)*0.7
 plt.plot(x, B, label = "Theoriekurve")
-plt.xlabel("x [cm]")
+plt.xlabel("x [m]")
 plt.ylabel("B [mT]")
 #plt.xlim(0, 45)
 plt.ylim(0, 35)
@@ -163,7 +163,7 @@ plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Mittlere Spule:
 plt.plot(x22,b22,'x',label = "Messwerte")
-plt.xlabel("x [cm]")
+plt.xlabel("x [m]")
 plt.ylabel("B [mT]")
 x = linspace(-.15, .27)
 B = ones(50)*1e3*mu_0*(3400/0.1)*0.8
@@ -174,7 +174,7 @@ plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Kurze Spule:
 plt.plot(x23,b23,'x',label = "Messwerte")
-plt.xlabel("x [cm]")
+plt.xlabel("x [m]")
 plt.ylabel("B [mT]")
 
 x = linspace(-.2, .25)
