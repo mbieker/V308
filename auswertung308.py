@@ -9,7 +9,8 @@ from scipy import *
 import matplotlib.pyplot as plt
 from uncertainties import *
 import math
-
+from numpy import linspace
+from scipy.constants import *
 
 def make_LaTeX_table(data,header, flip= 'false', onedim = 'false'):
     output = '\\begin{table}\n\\centering\n\\begin{tabular}{'
@@ -82,6 +83,11 @@ def lin_reg(x,y):
 
 # Auslesen der Messwerte
 
+
+#Helmholtzfunktion
+
+def B_HelH(x, I , R, d):
+    return (mu_0*I/2)*((R**2+(x+0.5*d)**2)**-1.5+(R**2+(x-0.5*d)**2)**-1.5)
 x11, b11 = loadtxt("messwerte11.txt", unpack=True)
 x12, b12 = loadtxt("messwerte12.txt", unpack=True)
 x13, b13 = loadtxt("messwerte13.txt", unpack=True)
@@ -89,58 +95,92 @@ x21, b21 = loadtxt("messwerte21.txt", unpack=True)
 x22, b22 = loadtxt("messwerte22.txt", unpack=True)
 x23, b23 = loadtxt("messwerte23.txt", unpack=True)
 
+#Kurven verschieben
+
+x11 -= 3.0
+x12 -= 1.25
+x13 -= 8
+x21 -= 18
+x22 -= 24
+x23 -= 2
+
+
+x11 *= 1e-2
+x12 *= 1e-2
+x13 *= 1e-2
+x21 *= 1e-2
+x22 *= 1e-2
+x23 *= 1e-2
 # Plots der experimentellen Werte
 # Spulenpaar 10 cm:
-plt.plot(x11,b11,'x')
+x = linspace(-0.08,.18)
+plt.plot(x11,b11,'x',label = "Messwerte")
+plt.plot(x,1e3*B_HelH(x, 2.78, 0.0625, 0.1),label = "Theoriekurve")
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
-plt.xlim(0, 21)
-plt.ylim(0, 3)
+#plt.xlim(-3, 18)
+#plt.ylim(0, 3)
+plt.legend()
 plt.savefig("e11.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Spulenpaar 6.25cm:
-plt.plot(x12,b12,'x')
+plt.plot(x12,b12,'x',label = "Messwerte")
+x = linspace(-0.01,.18)
+plt.plot(x,1e3*B_HelH(x, 2.78, 0.0625, 0.0625),label = "Theoriekurve")
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
-plt.xlim(0, 21)
-plt.ylim(0, 4)
+#plt.xlim(0, 21)
+#plt.ylim(0, 4)
+plt.legend()
 plt.savefig("e12.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Spulenpaar 20cm:
-plt.plot(x13,b13,'x')
+plt.plot(x13,b13,'x',label = "Messwerte")
+x = linspace(-0.08,.08)
+plt.plot(x,1e3*B_HelH(x, 2.78, 0.0625, 0.2),label = "Theoriekurve")
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
-plt.xlim(0, 16)
-plt.ylim(0, 2.5)
+#plt.xlim(0, 16)
+#plt.ylim(0, 2.5)
+plt.legend()
 plt.savefig("e13.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Lange Spule:
-plt.plot(x21,b21,'x')
+plt.plot(x21,b21,'x',label = "Messwerte")
+x = linspace(-.09, .24)
+B = ones(50)*1e3*mu_0*(3400/0.1)*0.7
+plt.plot(x, B, label = "Theoriekurve")
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
-plt.xlim(0, 45)
-plt.ylim(0, 9)
+#plt.xlim(0, 45)
+plt.ylim(0, 35)
+plt.legend()
 plt.savefig("e21.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Mittlere Spule:
-plt.plot(x22,b22,'x')
+plt.plot(x22,b22,'x',label = "Messwerte")
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
-plt.xlim(0, 55)
-plt.ylim(0, 12)
+x = linspace(-.15, .27)
+B = ones(50)*1e3*mu_0*(3400/0.1)*0.8
+plt.plot(x, B, label = "Theoriekurve")
+plt.legend()
 plt.savefig("e22.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
 #Kurze Spule:
-plt.plot(x23,b23,'x')
+plt.plot(x23,b23,'x',label = "Messwerte")
 plt.xlabel("x [cm]")
 plt.ylabel("B [mT]")
-plt.xlim(0, 55)
-plt.ylim(0, 10)
+
+x = linspace(-.2, .25)
+B = ones(50)*1e3*mu_0*(3400/0.1)*0.8
+plt.plot(x, B, label = "Theoriekurve")
+plt.legend()
 plt.savefig("e23.png")
 plt.show()
 plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
@@ -150,23 +190,3 @@ print "Alle Plots gespeichert!"
 
 
 
-"""
-laengenD=array([laengeZA,laengeZB,laengeZC])
-zeitenD=array([tdZA,tdZB,tdZC])
-m3, b3 = lin_reg(laengenD,zeitenD)
-print "m und b aus linearer Regression der 2 MHz Sonde: m=%s, b=%s" % (m3,b3)
-plt.plot([laengeZA,laengeZB,laengeZC],[tdZA,tdZB,tdZC],'x')
-
-x=linspace(0,0.25)
-
-plt.plot(x,x*m3.n+b3.n) ## Hier musst du als erstes Argument nocheinmal 'x' angeben !!!!! 
-
-
-plt.xlabel("Zylinderlaenge [m]")
-plt.ylabel("Laufzeit [10^(-6)sec]")
-plt.xlim(0, 0.25)
-plt.ylim(0, 0.0001)
-plt.savefig("Fig3.png")
-plt.close() # Hiermit wird die Zeichung nach dem speichern resettet
-
-"""

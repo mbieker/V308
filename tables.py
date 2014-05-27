@@ -64,8 +64,7 @@ for file in filenumber:
     
     
     
-def B_HelH(x, I , R, d):
-    return (mu_0*I/2)*((R**2+(x+0.5*d)**2)**-1.5+(R**2+(x-0.5*d)**2)**-1.5)
+
 
 
 x = linspace(-.3,.3)
